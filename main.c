@@ -1,3 +1,4 @@
+//Proyecto final 
 #include "lib/include.h"
 #define SLAVE_ADDRESS 0x3C // ESCLAVA PARA I2C0
 // MOVER EL OLEDFRONT A OTRA FUNCION EXTERNA
