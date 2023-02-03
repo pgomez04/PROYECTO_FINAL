@@ -1,4 +1,5 @@
 #include "lib/include.h"
+#define SLAVE_ADDRESS 0x3C // ESCLAVA PARA I2C0
 // MOVER EL OLEDFRONT A OTRA FUNCION EXTERNA
 
 // DECLARACION DE FUNCIONES
@@ -19,21 +20,19 @@ char I2C3_Wr(int slaveAddr, char memAddr, uint8_t data);
 // MAIN
 int main(void)
 {
+    
 	 I2C3_Init();
 	 OLED_Init();
 	 OLED_Clear();
     Configurar_PLL(_20MHZ);
                 
              OLED_YX( 0, 0 );
-             OLED_Write_String( "Hola " );
+             OLED_Write_String( "Tomando video.. " );
                              Delay_ms(1000);
 
-             OLED_YX(1, 0);
-             OLED_Write_String ("profe ");
-                         Delay_ms(1000);
 
              OLED_YX(2, 0);
-             OLED_Write_String ("una caguama?");
+             OLED_Write_String ("comunicacion I2C");
                          Delay_ms(1000);
 
             
